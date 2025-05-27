@@ -615,7 +615,7 @@
 "title_size": "14.4pt",
 "options": {
  "width":      500,
-"height":      400 
+"height":      500 
 },
 "geoms": [
  "geom1_tallrect_segments",
