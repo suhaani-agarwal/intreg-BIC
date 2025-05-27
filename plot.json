@@ -1,0 +1,787 @@
+{
+ "geoms": {
+ "geom1_tallrect_segments": {
+ "geom": "tallrect",
+"classed": "geom1_tallrect_segments",
+"aes": {
+ "xmin": "segments - 0.5",
+"xmax": "segments + 0.5",
+"clickSelects": "segments" 
+},
+"params": {
+ "na.rm": false,
+"colour": "#07C107",
+"na.rm": false,
+"fill": "#07C107",
+"alpha":      0.3,
+"size":      0.5,
+"clickSelects": "segments",
+"help_clickSelects": "segments" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"clickSelects": "integer",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL" 
+],
+"subset_order": [
+ "PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom2_line_segments": {
+ "geom": "line",
+"classed": "geom2_line_segments",
+"aes": {
+ "x": "segments",
+"y": "error",
+"group": "signal",
+"clickSelects": "signal" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.6,
+"size":        8,
+"clickSelects": "signal",
+"help_clickSelects": "signal" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"group": "character",
+"clickSelects": "factor",
+"PANEL": "factor" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL",
+"group" 
+],
+"subset_order": [
+ "PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom3_line_segments": {
+ "geom": "line",
+"classed": "geom3_line_segments",
+"aes": {
+ "x": "segments",
+"y": "penalized.error",
+"group": "signal",
+"clickSelects": "signal" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.6,
+"size":        8,
+"clickSelects": "signal",
+"help_clickSelects": "signal" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"group": "character",
+"clickSelects": "factor",
+"PANEL": "factor" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL",
+"group" 
+],
+"subset_order": [
+ "PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom4_blank_signal": {
+ "geom": "blank",
+"classed": "geom4_blank_signal",
+"aes": {
+ "x": "first.base/1e+06",
+"y": "logratio + 2/8" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+},
+"geom5_point_signal": {
+ "geom": "point",
+"classed": "geom5_point_signal",
+"aes": {
+ "x": "base/1e+06",
+"y": "logratio",
+"showSelected1": "signal" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"showSelected": "signal",
+"help_showSelected": "signal" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"showSelected1": "factor",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom6_segment_signal": {
+ "geom": "segment",
+"classed": "geom6_segment_signal",
+"aes": {
+ "x": "first.base/1e+06",
+"y": "mean",
+"xend": "last.base/1e+06",
+"yend": "mean",
+"showSelected1": "signal",
+"showSelected2": "segments" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"colour": "#07C107",
+"showSelected": [ "signal", "segments" ],
+"help_showSelected": [ "signal", "segments" ] 
+},
+"types": {
+ "x": "numeric",
+"xend": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"showSelected1": "factor",
+"showSelected2": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [
+ "signal" 
+],
+"nest_order": [
+ "showSelected2" 
+],
+"subset_order": [
+ "showSelected2" 
+],
+"columns": {
+ "common": [
+ "showSelected2",
+"group" 
+] 
+},
+"chunks": {
+ "1.7": 1,
+"10.9": 2,
+"11.2": 3,
+"11.8": 4,
+"4.2": 5,
+"4.3": 6,
+"4.5": 7 
+},
+"total": 7 
+},
+"geom7_segment_signal": {
+ "geom": "segment",
+"classed": "geom7_segment_signal",
+"aes": {
+ "x": "base/1e+06",
+"y": "min(sigs$logratio)",
+"xend": "base/1e+06",
+"yend": "max(sigs$logratio)",
+"showSelected1": "signal",
+"showSelected2": "segments" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"colour": "#07C107",
+"linetype": "dashed",
+"showSelected": [ "signal", "segments" ],
+"help_showSelected": [ "signal", "segments" ] 
+},
+"types": {
+ "x": "numeric",
+"xend": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"showSelected1": "factor",
+"showSelected2": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [
+ "signal" 
+],
+"nest_order": [
+ "showSelected2" 
+],
+"subset_order": [
+ "showSelected2" 
+],
+"columns": {
+ "common": [
+ "y",
+"yend",
+"showSelected2",
+"group" 
+] 
+},
+"chunks": {
+ "1.7": 1,
+"10.9": 2,
+"11.2": 3,
+"11.8": 4,
+"4.2": 5,
+"4.3": 6,
+"4.5": 7 
+},
+"total": 7 
+},
+"geom8_text_signal": {
+ "geom": "text",
+"classed": "geom8_text_signal",
+"aes": {
+ "x": "base/1e+06",
+"y": "logratio",
+"label": "paste(\"signal\", signal)",
+"showSelected1": "signal" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"size":       15,
+"showSelected": "signal",
+"help_showSelected": "signal" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"label": "character",
+"showSelected1": "factor",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom9_text_signal": {
+ "geom": "text",
+"classed": "geom9_text_signal",
+"aes": {
+ "x": "base/1e+06",
+"y": "logratio",
+"label": "sprintf(\"%d segment%s\", segments, ifelse(segments == 1, \"\", \"s\"))",
+"showSelected1": "signal",
+"showSelected2": "segments" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"colour": "#07C107",
+"showSelected": [ "signal", "segments" ],
+"help_showSelected": [ "signal", "segments" ] 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"label": "character",
+"showSelected1": "factor",
+"showSelected2": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected2",
+"showSelected1" 
+],
+"subset_order": [
+ "showSelected2",
+"showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+} 
+},
+"time": {
+ "variable": "segments",
+"ms":     3000,
+"sequence": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" ] 
+},
+"duration": {
+ "signal":     2000,
+"segments":     2000 
+},
+"selectors": {
+ "segments": {
+ "is.variable.value": false,
+"type": "single",
+"clickSelects": true,
+"showSelected": true,
+"selected": "4",
+"levels": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" ],
+"update": [
+ "geom1_tallrect_segments",
+"geom6_segment_signal",
+"geom7_segment_signal",
+"geom9_text_signal" 
+],
+"duration":     2000 
+},
+"signal": {
+ "is.variable.value": false,
+"type": "single",
+"clickSelects": true,
+"showSelected": true,
+"chunks": "signal",
+"selected": "4.2",
+"levels": [ "4.2", "11.2", "4.3", "4.5", "1.7", "11.8", "10.9" ],
+"update": [
+ "geom2_line_segments",
+"geom3_line_segments",
+"geom5_point_signal",
+"geom6_segment_signal",
+"geom7_segment_signal",
+"geom8_text_signal",
+"geom9_text_signal" 
+],
+"duration":     2000 
+} 
+},
+"plots": {
+ "segments": {
+ "panel_margin_lines":     0.27,
+"legend": {},
+"strips": {
+ "right": [
+ "penalized error (BIC)",
+"un-penalized error" 
+],
+"top": [
+ "",
+"" 
+],
+"n": {
+ "top":        1,
+"right":        1 
+} 
+},
+"layout": {
+ "PANEL": [ "1", "2" ],
+"ROW": [ 1, 2 ],
+"COL": [ 1, 1 ],
+"variable": [ "penalized error (BIC)", "un-penalized error" ],
+"SCALE_X": [ 1, 1 ],
+"SCALE_Y": [ 1, 2 ],
+"AXIS_Y": [ true, true ],
+"AXIS_X": [ false, true ],
+"coord_fixed": [ false, false ],
+"width_proportion": [        1,        1 ],
+"height_proportion": [      0.5,      0.5 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        1,
+       5,
+      10,
+      20 
+],
+[
+        1,
+       5,
+      10,
+      20 
+] 
+],
+"y": [
+ [
+       10,
+      20,
+      30,
+      40 
+],
+[
+        0,
+       5,
+      10,
+      15 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -3,
+      -1,
+       1,
+       3,
+       5,
+     7.5,
+      10,
+      15,
+      20,
+      22 
+],
+[
+       -3,
+      -1,
+       1,
+       3,
+       5,
+     7.5,
+      10,
+      15,
+      20,
+      22 
+] 
+],
+"y": [
+ [
+       10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40 
+],
+[
+        0,
+     2.5,
+       5,
+     7.5,
+      10,
+    12.5,
+      15 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        1,
+       5,
+      10,
+      20 
+],
+"xlab": [
+ "1",
+"5",
+"10",
+"20" 
+],
+"xrange": [    -3.15,    22.15 ],
+"xline": false,
+"xticks": true,
+"y": [
+       10,
+      20,
+      30,
+      40 
+],
+"ylab": [
+ "10",
+"20",
+"30",
+"40" 
+],
+"yrange": [ 5.322018, 41.90441 ],
+"yline": false,
+"yticks": true 
+},
+"axis2": {
+ "x": [
+        1,
+       5,
+      10,
+      20 
+],
+"xlab": [
+ "1",
+"5",
+"10",
+"20" 
+],
+"xrange": [    -3.15,    22.15 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+       5,
+      10,
+      15 
+],
+"ylab": [
+ "0",
+"5",
+"10",
+"15" 
+],
+"yrange": [ -0.1237499, 17.31681 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "segments",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "error",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "1",
+"5",
+"10",
+"20" 
+],
+"ylabs": [
+ "10",
+"20",
+"30",
+"40",
+"0",
+"5",
+"15" 
+],
+"title": "Select profile and number of segments",
+"title_size": "14.4pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"geoms": [
+ "geom1_tallrect_segments",
+"geom2_line_segments",
+"geom3_line_segments" 
+] 
+},
+"signal": {
+ "panel_margin_lines":     0.27,
+"legend": {},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+      100,
+     200 
+] 
+],
+"y": [
+ [
+       -2,
+      -1,
+       0,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+      50,
+     100,
+     150,
+     200,
+     250 
+] 
+],
+"y": [
+ [
+       -2,
+    -1.5,
+      -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+      100,
+     200 
+],
+"xlab": [
+ "100",
+"200" 
+],
+"xrange": [ -12.12105, 254.9402 ],
+"xline": false,
+"xticks": true,
+"y": [
+       -2,
+      -1,
+       0,
+       1 
+],
+"ylab": [
+ "-2",
+"-1",
+"0",
+"1" 
+],
+"yrange": [ -2.341741, 1.405082 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "position on chromosome (mega base pairs)",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "logratio",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "100",
+"200" 
+],
+"ylabs": [
+ "-2",
+"-1",
+"0",
+"1" 
+],
+"title": "Copy number profile and maximum likelihood segmentation",
+"title_size": "14.4pt",
+"options": {
+ "width":      800,
+"height":      400 
+},
+"geoms": [
+ "geom4_blank_signal",
+"geom5_point_signal",
+"geom6_segment_signal",
+"geom7_segment_signal",
+"geom8_text_signal",
+"geom9_text_signal" 
+] 
+} 
+},
+"source": "https://github.com/suhaani-agarwal/animint/blob/master/inst/examples/intreg_BIC.R",
+"title": "Segmentation model selection with BIC" 
+}
