@@ -391,7 +391,7 @@
 },
 "plots": {
  "segments": {
- "panel_margin_lines":     0.27,
+ "panel_margin_lines":      1.5,
 "legend": {},
 "strips": {
  "right": [
