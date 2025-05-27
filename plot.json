@@ -620,7 +620,7 @@
 "title": "Select profile and number of segments",
 "title_size": "14.4pt",
 "options": {
- "width":      400,
+ "width":      500,
 "height":      400 
 },
 "geoms": [

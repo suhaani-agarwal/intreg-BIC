@@ -1609,7 +1609,6 @@ var animint = function (to_select, json_file) {
       moreActions(e)
     };
     doActions(enter);  // DO NOT DELETE!
-    //adding tooltip using tippy.js
     var has_tooltip = g_info.aes.hasOwnProperty("tooltip");
     if(has_clickSelects || has_tooltip || has_clickSelects_variable){
       var text_fun;
@@ -1627,20 +1626,11 @@ var animint = function (to_select, json_file) {
 	  return d["clickSelects.variable"] + " " + d["clickSelects.value"];
 	};
       }
-      // Setting the data-tippy-content attribute on each element
-      elements.attr("data-tippy-content", text_fun);
-
-      // Initializing tippy.js on all elements with data-tippy-content
-      tippy("[data-tippy-content]", {
-        allowHTML: false,
-        interactive: false,
-        theme: 'light',
-        delay: [800, 0],
-        appendTo: document.body,
-        hideOnClick: true
-      });
-      // Removing any existing <title> elements to avoid conflicts
+      // if elements have an existing title, remove it.
       elements.selectAll("title").remove();
+      elements.append("svg:title")
+        .text(get_fun(text_fun))
+      ;
     }
     if(Selectors.hasOwnProperty(selector_name)){
       var milliseconds = Selectors[selector_name].duration;
